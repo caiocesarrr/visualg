@@ -1,0 +1,29 @@
+var
+notas:vetor[1..2] de inteiro
+aluno:vetor[1..20] de caractere
+i,soma:inteiro
+media:real
+s,n:caractere
+inicio
+escreval("digite o nome do aluno")
+repita
+para i de 1 ate 20 faca
+   leia(aluno[i])
+   escreval("digite as 2 notas")
+   para i de 1 ate 2 faca
+      leia(notas[i])
+      soma <- soma + notas[i]
+      media <- soma/2
+   fimpara
+   escreval("A média das notas é:", media)
+
+   se media >= 7 entao
+      escreval("aluno aprovado")
+   senao
+      escreval("aluno reprovado")
+        fimse
+    fimpara
+    ate
+
+
+fimalgoritmo
