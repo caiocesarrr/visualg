@@ -1,33 +1,48 @@
 var
-notas:vetor[1..2] de inteiro
-aluno:vetor[1..3] de caractere
-i,soma:inteiro
-media:real
-s,n:caractere
-inicio
-escreval("digite o nome do aluno:")
-repita
-para i de 1 ate 3 faca
-   leia(aluno[i])
-   escreval("digite as 2 notas:")
-   para i de 1 ate 2 faca
-      leia(notas[i])
-      soma <- soma + notas[i]
-      media <- soma/2
-   fimpara
-   escreval("A média das notas é:", media)
+   notas:vetor[1..2] de inteiro
+   aluno:vetor[1..3] de caractere
+   i,soma:inteiro
+   media:real
+   resposta:caractere
+   continua:logico
+   s,n:caractere
 
-   se media >= 7 entao
-      escreval("aluno aprovado")
-   senao
-      escreval("aluno reprovado")
-        fimse
-        escreval("")
-        escreval("para fechar o programa aperte esc")
-        escreval("")
-        escreval("digite o nome do aluno:")
-    fimpara
+inicio
+   escreval("digite o nome do aluno:")
+   repita
+      para i de 1 ate 3 faca
+         leia(aluno[i])
+         escreval("digite as 2 notas:")
+         para i de 1 ate 2 faca
+            leia(notas[i])
+            soma <- soma + notas[i]
+            media <- soma/2
+         fimpara
+         escreval("A média das notas é:", media)
+
+         se media >= 7 entao
+            escreval("aluno aprovado")
+         senao
+            escreval("aluno reprovado")
+         fimse
+         escreval("deseja continuar o programa?")
+         escreval("s/n")
+         leia (resposta)
+         se (resposta= "s") entao
+            continua <- verdadeiro
+            limpatela
+            escreval("digite o nome do aluno:")
+         senao
+            se (resposta="n") entao
+               continua <-  falso
+               limpatela
+               escreval("fim do programa!")
+               escreval("pressione a tecla esc")
+            fimse
+         fimse
+      fimpara
    fimrepita
+
 
 
 fimalgoritmo
